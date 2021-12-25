@@ -7,7 +7,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 const LanguageSelector = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const selectedLanguage = i18n.language;
   const availableLanguages = Object.keys(i18n.services.resourceStore.data);
