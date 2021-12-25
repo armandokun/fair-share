@@ -1,15 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom";
+import { CssBaseline } from "@mui/material";
+
+import "./translations";
+import "./index.css";
+import App from "./App";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
+import { ThemeContextProvider } from "./containers/ThemeProvider";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <StrictMode>
+    <ThemeContextProvider>
+      <CssBaseline />
+      <App />
+    </ThemeContextProvider>
+  </StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

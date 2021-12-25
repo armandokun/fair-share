@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Container, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
+
+import { Form, ToggleColorMode } from "./components";
+import ToggleLanguage from "./components/LanguageSelector/LanguageSelector";
 
 function App() {
+  const { t } = useTranslation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="md" sx={{ mt: 5 }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <ToggleColorMode />
+        <ToggleLanguage />
+      </Box>
+      <Typography variant="h4">{t("intro.title")}</Typography>
+      <Typography variant="subtitle1">{t("intro.description")}</Typography>
+      <Form />
+    </Container>
   );
 }
 
