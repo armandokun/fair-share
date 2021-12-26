@@ -97,6 +97,7 @@ i18n
     interpolation: {
       escapeValue: false, // react already safes from xss
     },
+    fallbackLng: "en",
   });
 
 export default i18n;

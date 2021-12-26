@@ -72,10 +72,10 @@ const Form = () => {
   };
 
   const renderEvaluationNote = () => {
-    if (salaryPercent > 99) return t("evaluation_note.title.error");
-    if (salaryPercent === 50) return t("evaluation_note.title.half");
-    if (salaryPercent > 50) return t("evaluation_note.title.too_much");
-    if (salaryPercent < 10) return t("evaluation_note.title.cheap");
+    if (salaryPercent > 99) return t("summary.evaluation_note.title.error");
+    if (salaryPercent === 50) return t("summary.evaluation_note.title.half");
+    if (salaryPercent > 50) return t("summary.evaluation_note.title.too_much");
+    if (salaryPercent < 10) return t("summary.evaluation_note.title.cheap");
 
     return null;
   };

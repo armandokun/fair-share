@@ -9,20 +9,17 @@ import { useTranslation } from "react-i18next";
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
 
-  const selectedLanguage = i18n.language;
+  const selectedLanguage = i18n.languages[0];
   const availableLanguages = Object.keys(i18n.services.resourceStore.data);
 
   const handleChange = (event: SelectChangeEvent) => {
     i18n.changeLanguage(event.target.value);
   };
 
-  const getLanguageName = (language: string) =>
-    language === "en" ? "EN" : "LT";
-
   const renderLanguageItems = () =>
     availableLanguages.map((language) => (
       <MenuItem value={language} key={language}>
-        {getLanguageName(language)}
+        {language.toLocaleUpperCase()}
       </MenuItem>
     ));
 
