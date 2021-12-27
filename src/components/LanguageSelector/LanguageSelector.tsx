@@ -27,6 +27,8 @@ const LanguageSelector = () => {
     <FormControl>
       <Select
         id="language-select"
+        aria-label="language-select"
+        size="small"
         value={selectedLanguage}
         onChange={handleChange}
       >

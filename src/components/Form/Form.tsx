@@ -5,14 +5,14 @@ import {
   Card,
   Container,
   Divider,
-  IconButton,
-  InputAdornment,
   Stack,
   TextField,
   Typography,
 } from "@mui/material";
-import { Add, DeleteOutlined } from "@mui/icons-material";
+import { Add } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
+
+import BinIcon from "./BinIcon";
 
 import { REQUIRED_SALARIES } from "../../constants";
 import {
@@ -46,30 +46,35 @@ const Form = () => {
       return [...prevState];
     });
 
-  const renderBinIcon = (index: number) => (
-    <InputAdornment position="end">
-      <IconButton onClick={handleRemove(index)}>
-        <DeleteOutlined />
-      </IconButton>
-    </InputAdornment>
-  );
-
-  const renderSalariesInputs = () => {
-    return salaries.map((_, index) => {
+  const renderSalariesInputs = () =>
+    salaries.map((_, index) => {
       return (
         <TextField
           key={`salary-${index}`}
           label={t("salary.title", { number: index + 1 })}
           type="number"
           InputProps={{
-            endAdornment: index >= REQUIRED_SALARIES && renderBinIcon(index),
+            endAdornment: index >= REQUIRED_SALARIES && (
+              <BinIcon position="end" onClick={handleRemove(index)} />
+            ),
           }}
           required={index < REQUIRED_SALARIES}
           onChange={handleChange(index)}
         />
       );
     });
-  };
+
+  const renderSalariesOutputs = () =>
+    salaries.map((salary, index) => {
+      return (
+        <Typography variant="body1" key={`summary-${index}`}>
+          {t("summary.salary.title", {
+            number: index + 1,
+            payment: getIndividualPayment(salary, salaryPercent),
+          })}
+        </Typography>
+      );
+    });
 
   const renderEvaluationNote = () => {
     if (salaryPercent > 99) return t("summary.evaluation_note.title.error");
@@ -82,7 +87,7 @@ const Form = () => {
 
   const renderSummary = () => {
     const formattedSalaryPercent = salaryPercent.toPrecision(2);
-    const summarySalaryPercentText =
+    const summaryDescription =
       decimalCount(salaryPercent) === 0
         ? t("summary.description_exact", {
             salaryPercent: formattedSalaryPercent,
@@ -96,18 +101,9 @@ const Form = () => {
         <Box sx={{ "& .MuiTextField-root": { m: 2 } }}>
           <Typography variant="h6">{t("summary.title")}</Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            {summarySalaryPercentText}
+            {summaryDescription}
           </Typography>
-          {salaries.map((salary, index) => {
-            return (
-              <Typography variant="body1" key={`summary-${index}`}>
-                {t("summary.salary.title", {
-                  number: index + 1,
-                  payment: getIndividualPayment(salary, salaryPercent),
-                })}
-              </Typography>
-            );
-          })}
+          {renderSalariesOutputs()}
           <Typography variant="body2" sx={{ mt: 2 }}>
             {renderEvaluationNote()}
           </Typography>
