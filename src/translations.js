@@ -92,7 +92,7 @@ const resources = {
       },
       footer: {
         copyright: {
-          title: "© Jokių autorinių teisių, tik lygios",
+          title: "© Jokių autorinių teisių",
         },
       },
     },

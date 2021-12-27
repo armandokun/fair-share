@@ -1,10 +1,21 @@
+import { createContext, useEffect, useMemo, useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { createContext, useMemo, useState } from "react";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 const ThemeContextProvider = ({ children }) => {
-  const [mode, setMode] = useState<"light" | "dark">("dark");
+  const isDarkModeEnabled = localStorage.getItem("darkMode") === "true";
+
+  const [mode, setMode] = useState<"light" | "dark">(
+    isDarkModeEnabled ? "dark" : "light"
+  );
+
+  useEffect(() => {
+    if (isDarkModeEnabled && mode === "dark") return;
+    if (mode === "dark") return localStorage.setItem("darkMode", "true");
+
+    return localStorage.setItem("darkMode", "false");
+  }, [isDarkModeEnabled, mode]);
 
   const colorMode = useMemo(
     () => ({
