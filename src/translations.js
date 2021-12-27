@@ -45,10 +45,7 @@ const resources = {
       },
       footer: {
         copyright: {
-          title: "© No copyrights, use it as intended",
-        },
-        repository: {
-          title: "Fork this project on Github",
+          title: "© No copyrights, just equal ones",
         },
       },
     },
@@ -96,9 +93,6 @@ const resources = {
       footer: {
         copyright: {
           title: "© Jokių autorinių teisių, tik lygios",
-        },
-        repository: {
-          title: "Pasidaryk savaip Github'e",
         },
       },
     },
