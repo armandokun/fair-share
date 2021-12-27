@@ -43,6 +43,14 @@ const resources = {
           add: "Add another person",
         },
       },
+      footer: {
+        copyright: {
+          title: "© No copyrights, use it as intended",
+        },
+        repository: {
+          title: "Fork this project on Github",
+        },
+      },
     },
   },
   lt: {
@@ -83,6 +91,14 @@ const resources = {
         },
         actions: {
           add: "Pridėti papildomą žmogų",
+        },
+      },
+      footer: {
+        copyright: {
+          title: "© Jokių autorinių teisių, tik lygios",
+        },
+        repository: {
+          title: "Pasidaryk savaip Github'e",
         },
       },
     },

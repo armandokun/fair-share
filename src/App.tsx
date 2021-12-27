@@ -1,8 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-import { Form, ToggleColorMode } from "./components";
-import ToggleLanguage from "./components/LanguageSelector/LanguageSelector";
+import { Footer, Form, LanguageSelector, ToggleColorMode } from "./components";
 
 function App() {
   const { t } = useTranslation();
@@ -17,11 +16,12 @@ function App() {
         }}
       >
         <ToggleColorMode />
-        <ToggleLanguage />
+        <LanguageSelector />
       </Box>
       <Typography variant="h4">{t("intro.title")}</Typography>
       <Typography variant="subtitle1">{t("intro.description")}</Typography>
       <Form />
+      <Footer />
     </Container>
   );
 }
