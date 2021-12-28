@@ -30,6 +30,7 @@ const LanguageSelector = () => {
       <Select
         id="language-select"
         aria-label="language-select"
+        data-testid="language-select"
         size="small"
         value={selectedLanguage}
         onChange={handleChange}

@@ -45,7 +45,7 @@ const resources = {
       },
       footer: {
         copyright: {
-          title: "© No copyrights, just equal ones",
+          title: "© No copyrights",
         },
       },
     },
