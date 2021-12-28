@@ -5,9 +5,9 @@ import { CssBaseline } from "@mui/material";
 import "./translations";
 import "./index.css";
 import App from "./App";
+import ThemeContextProvider from "./containers";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import { ThemeContextProvider } from "./containers/ThemeProvider";
 
 ReactDOM.render(
   <StrictMode>

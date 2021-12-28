@@ -9,11 +9,13 @@ import { useTranslation } from "react-i18next";
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
 
-  const selectedLanguage = i18n.languages[0];
+  const selectedLanguage = localStorage.getItem("language") || "en";
   const availableLanguages = Object.keys(i18n.services.resourceStore.data);
 
   const handleChange = (event: SelectChangeEvent) => {
     i18n.changeLanguage(event.target.value);
+
+    localStorage.setItem("language", event.target.value);
   };
 
   const renderLanguageItems = () =>

@@ -1,21 +1,25 @@
 import { createContext, useEffect, useMemo, useState } from "react";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
+
+type ColorMode = "light" | "dark" | null;
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 const ThemeContextProvider = ({ children }) => {
-  const isDarkModeEnabled = localStorage.getItem("darkMode") === "true";
+  // if dark mode local storage is there, use its value to set the theme
+  // otherwise, use the one that is prefered by the user
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const savedColorMode = localStorage.getItem("colorMode") as ColorMode;
 
-  const [mode, setMode] = useState<"light" | "dark">(
-    isDarkModeEnabled ? "dark" : "light"
+  const [mode, setMode] = useState<"dark" | "light">(
+    savedColorMode || (prefersDarkMode ? "dark" : "light")
   );
 
   useEffect(() => {
-    if (isDarkModeEnabled && mode === "dark") return;
-    if (mode === "dark") return localStorage.setItem("darkMode", "true");
+    if (!savedColorMode) return localStorage.setItem("colorMode", mode);
 
-    return localStorage.setItem("darkMode", "false");
-  }, [isDarkModeEnabled, mode]);
+    if (savedColorMode !== mode) return localStorage.setItem("colorMode", mode);
+  }, [mode, savedColorMode]);
 
   const colorMode = useMemo(
     () => ({
@@ -42,4 +46,4 @@ const ThemeContextProvider = ({ children }) => {
   );
 };
 
-export { ThemeContextProvider };
+export default ThemeContextProvider;
