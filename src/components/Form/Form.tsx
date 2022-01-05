@@ -28,6 +28,8 @@ const Form = () => {
 
   const { t } = useTranslation("translation", { keyPrefix: "form" });
 
+  const isSalaryPercentInRange = salaryPercent > 1 && salaryPercent < 100;
+
   useEffect(() => {
     setSalaryPercent(getSalaryPercent(salaries, rentToPay));
   }, [salaries, rentToPay]);
@@ -77,7 +79,6 @@ const Form = () => {
     });
 
   const renderEvaluationNote = () => {
-    if (salaryPercent > 99) return t("summary.evaluation_note.title.error");
     if (salaryPercent === 50) return t("summary.evaluation_note.title.half");
     if (salaryPercent > 50) return t("summary.evaluation_note.title.too_much");
     if (salaryPercent < 10) return t("summary.evaluation_note.title.cheap");
@@ -137,7 +138,7 @@ const Form = () => {
           type="number"
           onChange={(e) => setRentToPay(Number(e.target.value))}
         />
-        {!!salaryPercent && renderSummary()}
+        {isSalaryPercentInRange && renderSummary()}
       </Box>
     </Card>
   );

@@ -31,7 +31,6 @@ const resources = {
           },
           evaluation_note: {
             title: {
-              error: "Looks like you overcalculated stuff, have you smoked? 🌿",
               half: "Jackpot! 🎰 You waste 50% of your salary on rent.",
               too_much: "Do you really want to rent this place? 🤔",
               cheap:
@@ -41,11 +40,17 @@ const resources = {
         },
         actions: {
           add: "Add another person",
+          remove: "Remove this field",
         },
       },
       footer: {
         copyright: {
           title: "© No copyrights",
+        },
+      },
+      settings: {
+        color_mode: {
+          title: "Toggle color mode",
         },
       },
     },
@@ -78,7 +83,6 @@ const resources = {
           },
           evaluation_note: {
             title: {
-              error: "Kažką jau čia pridirbai... gal parūkęs būsi? 🌿",
               half: "Jackpot! 🎰 50% tavo algos galėjo atsidurti sąnkaupose...",
               too_much:
                 "Kokių lažybų prireikė, kad nuspręstum nuomotis dabartinę vietą? 🤔",
@@ -87,12 +91,18 @@ const resources = {
           },
         },
         actions: {
-          add: "Pridėti papildomą žmogų",
+          add: "Pridėti papildomą laukelį",
+          remove: "Ištrinti šį laukelį",
         },
       },
       footer: {
         copyright: {
           title: "© Jokių autorinių teisių",
+        },
+      },
+      settings: {
+        color_mode: {
+          title: "Įjungti kitą spalvos režimą",
         },
       },
     },
