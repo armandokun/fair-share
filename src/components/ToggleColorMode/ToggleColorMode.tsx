@@ -16,7 +16,11 @@ const ToggleDarkMode = () => {
 
   return (
     <Tooltip title={title}>
-      <IconButton onClick={colorMode.toggleColorMode} color="inherit">
+      <IconButton
+        onClick={colorMode.toggleColorMode}
+        color="inherit"
+        data-testid="toggle-color-mode-icon-button"
+      >
         {theme.palette.mode === "dark" ? (
           <DarkModeOutlined />
         ) : (

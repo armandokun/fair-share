@@ -5,16 +5,16 @@ import { CssBaseline } from "@mui/material";
 import "./translations";
 import "./index.css";
 import App from "./App";
-import ThemeContextProvider from "./containers";
+import { ThemeProvider } from "./containers";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <StrictMode>
-    <ThemeContextProvider>
+    <ThemeProvider>
       <CssBaseline />
       <App />
-    </ThemeContextProvider>
+    </ThemeProvider>
   </StrictMode>,
   document.getElementById("root")
 );

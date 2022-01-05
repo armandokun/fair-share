@@ -6,8 +6,6 @@ type ColorMode = "light" | "dark" | null;
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 const ThemeContextProvider = ({ children }) => {
-  // if dark mode local storage is there, use its value to set the theme
-  // otherwise, use the one that is prefered by the user
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const savedColorMode = localStorage.getItem("colorMode") as ColorMode;
 
