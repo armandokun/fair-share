@@ -6,7 +6,7 @@ const resources = {
   en: {
     translation: {
       intro: {
-        title: "Fair kvartira calculator",
+        title: "Split the rent in a <u>fair</u> way",
         description:
           "As most of us experienced, we get different salaries based on what we do or where we work - this calculator tries to justify that gap and encourages you to pay the rent based on the same percentage that is drawn from all of your salaries that you've typed down.",
       },
@@ -58,7 +58,7 @@ const resources = {
   lt: {
     translation: {
       intro: {
-        title: "Sąžiningas xatos kalkuliatorius",
+        title: "Sąžiningas nuomos skaičiuotuvas",
         description:
           "Jei jau pavyko čia užklįsti, reiškias žinom bendrą tiesą - gauname piniginį atlygį priklausomai nuo kur ir ką dirbame. Šis įrankis stengiasi surasti kompromisą tarp žmonių, su kuriais daliniesi nuoma, ir padrąsinti tave mokėti vienodą procentą atskaičiavus nuo algos, o ne vienodą nuomos mokestį.",
       },

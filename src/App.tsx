@@ -15,7 +15,12 @@ function App() {
             <ToggleColorMode />
           </Stack>
         </Box>
-        <Typography variant="h4">{t("intro.title")}</Typography>
+        <Typography
+          variant="h4"
+          dangerouslySetInnerHTML={{
+            __html: t("intro.title", { interpolation: { escapeValue: false } }),
+          }}
+        />
         <Typography variant="subtitle1">{t("intro.description")}</Typography>
         <Form />
       </Container>
