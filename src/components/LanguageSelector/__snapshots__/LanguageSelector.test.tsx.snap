@@ -7,7 +7,7 @@ exports[`<LanguageSelector /> renders correctly 1`] = `
   >
     <div
       aria-label="language-select"
-      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       data-testid="language-select"
     >
       <div
@@ -43,7 +43,7 @@ exports[`<LanguageSelector /> renders correctly 1`] = `
         class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          class="css-nnbavb"
+          class="css-hdw1oc"
         >
           <span
             class="notranslate"
@@ -66,7 +66,7 @@ exports[`<LanguageSelector /> renders language items when clicked on select comp
   >
     <div
       aria-label="language-select"
-      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiInputBase-sizeSmall css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiInputBase-sizeSmall  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       data-testid="language-select"
     >
       <div
@@ -102,7 +102,7 @@ exports[`<LanguageSelector /> renders language items when clicked on select comp
         class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          class="css-nnbavb"
+          class="css-hdw1oc"
         >
           <span
             class="notranslate"

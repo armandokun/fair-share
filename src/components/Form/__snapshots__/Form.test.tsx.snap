@@ -70,7 +70,7 @@ exports[`<Form /> renders correctly 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-173wfxe"
+                class="css-1ftyaf0"
               >
                 <span>
                   Salary 1
@@ -115,7 +115,7 @@ exports[`<Form /> renders correctly 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-173wfxe"
+                class="css-1ftyaf0"
               >
                 <span>
                   Salary 2
@@ -164,7 +164,7 @@ exports[`<Form /> renders correctly 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-173wfxe"
+              class="css-1ftyaf0"
             >
               <span>
                 Rent to pay

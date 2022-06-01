@@ -2,14 +2,30 @@
 
 exports[`<Footer /> renders correctly 1`] = `
 <div>
-  <div
-    class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1p4tas-MuiContainer-root"
-  >
-    <p
-      class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+  <footer>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters css-1emo50b-MuiContainer-root"
     >
-      © No copyrights
-    </p>
-  </div>
+      <div
+        class="css-3y1137-MuiStack-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
+        >
+          © Made with empathy
+        </p>
+        <a
+          class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          href="https://github.com/armandokun/fair-share/fork"
+          tabindex="0"
+        >
+          Fork this project on Github
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+    </div>
+  </footer>
 </div>
 `;

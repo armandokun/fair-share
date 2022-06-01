@@ -16,6 +16,15 @@ describe("<Footer />", () => {
   it("renders footer text", () => {
     renderHelper(<Footer />);
 
-    expect(screen.getByText("© No copyrights")).toBeInTheDocument();
+    expect(screen.getByText("© Made with empathy")).toBeInTheDocument();
+  });
+
+  it("renders fork this project button with correct href", () => {
+    renderHelper(<Footer />);
+
+    expect(screen.getByText("Fork this project on Github")).toHaveAttribute(
+      "href",
+      "https://github.com/armandokun/fair-share/fork"
+    );
   });
 });

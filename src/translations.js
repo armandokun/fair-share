@@ -45,7 +45,7 @@ const resources = {
       },
       footer: {
         copyright: {
-          title: "© No copyrights",
+          title: "© Made with empathy",
         },
       },
       settings: {
@@ -97,7 +97,7 @@ const resources = {
       },
       footer: {
         copyright: {
-          title: "© Jokių autorinių teisių",
+          title: "© Visos autorinės teisės saugomos empatijos",
         },
       },
       settings: {
